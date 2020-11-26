@@ -1,0 +1,20 @@
+[1;31m
+Start test 1[0m
+Turn 1. Answer:
+> 3601
+7Grade: 0 bull(s) and 2 cow(s). The secret code is 1234
+
+Turn 2. Answer:
+[1;31m
+Start test 2[0m
+Turn 1. Answer:
+> 1234
+Grade: 4 bulls.
+#Congrats! The secret code is 1234.
+[1;31m
+Start test 3[0m
+Turn 1. Answer:
+> 5678
+%Grade: None. The secret code is 1234
+
+Turn 2. Answer:

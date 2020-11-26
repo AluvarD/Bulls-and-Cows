@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Bulls_and_Cows.iml" filepath="$PROJECT_DIR$/.idea/modules/Bulls_and_Cows.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Bulls and Cows/task/Bulls_and_Cows.Bulls_and_Cows-task.iml" filepath="$PROJECT_DIR$/.idea/modules/Bulls and Cows/task/Bulls_and_Cows.Bulls_and_Cows-task.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Bulls and Cows/task/Bulls_and_Cows.Bulls_and_Cows-task.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Bulls and Cows/task/Bulls_and_Cows.Bulls_and_Cows-task.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Bulls and Cows/task/Bulls_and_Cows.Bulls_and_Cows-task.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Bulls and Cows/task/Bulls_and_Cows.Bulls_and_Cows-task.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Convert a date/Bulls_and_Cows.Problems-Convert_a_date.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Convert a date/Bulls_and_Cows.Problems-Convert_a_date.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Convert a date/Bulls_and_Cows.Problems-Convert_a_date.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Convert a date/Bulls_and_Cows.Problems-Convert_a_date.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Convert a date/Bulls_and_Cows.Problems-Convert_a_date.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Convert a date/Bulls_and_Cows.Problems-Convert_a_date.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Generating passwords/Bulls_and_Cows.Problems-Generating_passwords.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Generating passwords/Bulls_and_Cows.Problems-Generating_passwords.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Generating passwords/Bulls_and_Cows.Problems-Generating_passwords.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Generating passwords/Bulls_and_Cows.Problems-Generating_passwords.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Generating passwords/Bulls_and_Cows.Problems-Generating_passwords.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Generating passwords/Bulls_and_Cows.Problems-Generating_passwords.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Initializing an array of characters/Bulls_and_Cows.Problems-Initializing_an_array_of_characters.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Initializing an array of characters/Bulls_and_Cows.Problems-Initializing_an_array_of_characters.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Initializing an array of characters/Bulls_and_Cows.Problems-Initializing_an_array_of_characters.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Initializing an array of characters/Bulls_and_Cows.Problems-Initializing_an_array_of_characters.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Initializing an array of characters/Bulls_and_Cows.Problems-Initializing_an_array_of_characters.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Initializing an array of characters/Bulls_and_Cows.Problems-Initializing_an_array_of_characters.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/Bulls_and_Cows.util.iml" filepath="$PROJECT_DIR$/.idea/modules/util/Bulls_and_Cows.util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/Bulls_and_Cows.util.main.iml" filepath="$PROJECT_DIR$/.idea/modules/util/Bulls_and_Cows.util.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/Bulls_and_Cows.util.test.iml" filepath="$PROJECT_DIR$/.idea/modules/util/Bulls_and_Cows.util.test.iml" />
+    </modules>
+  </component>
+</project>
