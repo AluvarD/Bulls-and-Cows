@@ -59,18 +59,18 @@ public class Main {
         return number;
     }
 
-    /*public static boolean checkAnswerForInt(int secretNumber, int answer) {
+    public static boolean checkAnswerForLong(long secretNumber, long answer) {
+        String a = Long.toString(secretNumber);
+        char[] checkSecretNumber = a.toCharArray();
+        String b = Long.toString(answer);
+        char[] checkAnswerNumber = b.toCharArray();
+        int bull = 0;
+        int cow = 0;
         if (secretNumber == answer) {
-            System.out.println("Grade: 4 bulls.");
-            System.out.println("Congrats! The secret code is " + secretNumber + ".");
+            System.out.println("Grade: " + a.length() + " bulls.");
+            System.out.println("Congratulations! You guessed the secret code.");
             return false;
         } else {
-            String a = Integer.toString(secretNumber);
-            char[] checkSecretNumber = a.toCharArray();
-            String b = Integer.toString(answer);
-            char[] checkAnswerNumber = b.toCharArray();
-            int bull = 0;
-            int cow = 0;
             for (int i = 0; i < checkAnswerNumber.length; i++) {
                 for (int j = 0; j < checkSecretNumber.length; j++) {
                     if (i == j && checkAnswerNumber[i] == checkSecretNumber[j]) {
@@ -81,40 +81,11 @@ public class Main {
                 }
             }
             if (bull == 0 && cow ==0){
-                System.out.println("Grade: None. The secret code is " + secretNumber + "\n");
+                System.out.println("Grade: None.");
             } else {
-                System.out.println("Grade: " + bull + " bull(s) and " + cow + " cow(s). The secret code is " + secretNumber +"\n");
+                System.out.println("Grade: " + bull + " bull(s) and " + cow + " cow(s).");
             }
             return true;
-        }*/
-
-        public static boolean checkAnswerForLong(long secretNumber, long answer) {
-            String a = Long.toString(secretNumber);
-            char[] checkSecretNumber = a.toCharArray();
-            String b = Long.toString(answer);
-            char[] checkAnswerNumber = b.toCharArray();
-            int bull = 0;
-            int cow = 0;
-            if (secretNumber == answer) {
-                System.out.println("Grade: " + a.length() + " bulls.");
-                System.out.println("Congratulations! You guessed the secret code.");
-                return false;
-            } else {
-                for (int i = 0; i < checkAnswerNumber.length; i++) {
-                    for (int j = 0; j < checkSecretNumber.length; j++) {
-                        if (i == j && checkAnswerNumber[i] == checkSecretNumber[j]) {
-                            bull++;
-                        } else if (checkAnswerNumber[i] == checkSecretNumber[j]) {
-                            cow++;
-                        }
-                    }
-                }
-                if (bull == 0 && cow ==0){
-                    System.out.println("Grade: None.");
-                } else {
-                    System.out.println("Grade: " + bull + " bull(s) and " + cow + " cow(s).");
-                }
-                return true;
-            }
+        }
     }
 }
