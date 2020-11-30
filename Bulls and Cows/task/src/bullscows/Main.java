@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int answer;
-        int secretNumber = 1234;
+        long answer;
         int count;
+        System.out.println("Please, enter the secret code's length:");
         while (true) {
             count = scanner.nextInt();
             if (count > 10) {
@@ -17,13 +17,12 @@ public class Main {
             }
         }
         long generatedSecretNumber = generateSecretNumber(count);
-        System.out.println("The random secret number is " + generatedSecretNumber);
         int turn = 1;
-        /*do {
-            System.out.println("Turn " + turn + ". Answer:");
-            answer = scanner.nextInt();
+        do {
+            System.out.println("Turn " + turn + ":");
+            answer = scanner.nextLong();
             turn++;
-        } while (checkAnswerForInt(secretNumber, answer));*/
+        } while (checkAnswerForLong(generatedSecretNumber, answer));
     }
 
     public static long generateSecretNumber(int count){
@@ -60,7 +59,7 @@ public class Main {
         return number;
     }
 
-    public static boolean checkAnswerForInt(int secretNumber, int answer) {
+    /*public static boolean checkAnswerForInt(int secretNumber, int answer) {
         if (secretNumber == answer) {
             System.out.println("Grade: 4 bulls.");
             System.out.println("Congrats! The secret code is " + secretNumber + ".");
@@ -87,6 +86,35 @@ public class Main {
                 System.out.println("Grade: " + bull + " bull(s) and " + cow + " cow(s). The secret code is " + secretNumber +"\n");
             }
             return true;
-        }
+        }*/
+
+        public static boolean checkAnswerForLong(long secretNumber, long answer) {
+            String a = Long.toString(secretNumber);
+            char[] checkSecretNumber = a.toCharArray();
+            String b = Long.toString(answer);
+            char[] checkAnswerNumber = b.toCharArray();
+            int bull = 0;
+            int cow = 0;
+            if (secretNumber == answer) {
+                System.out.println("Grade: " + a.length() + " bulls.");
+                System.out.println("Congratulations! You guessed the secret code.");
+                return false;
+            } else {
+                for (int i = 0; i < checkAnswerNumber.length; i++) {
+                    for (int j = 0; j < checkSecretNumber.length; j++) {
+                        if (i == j && checkAnswerNumber[i] == checkSecretNumber[j]) {
+                            bull++;
+                        } else if (checkAnswerNumber[i] == checkSecretNumber[j]) {
+                            cow++;
+                        }
+                    }
+                }
+                if (bull == 0 && cow ==0){
+                    System.out.println("Grade: None.");
+                } else {
+                    System.out.println("Grade: " + bull + " bull(s) and " + cow + " cow(s).");
+                }
+                return true;
+            }
     }
 }
