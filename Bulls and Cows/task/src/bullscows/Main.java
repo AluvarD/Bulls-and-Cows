@@ -1,5 +1,6 @@
 package bullscows;
 import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -22,7 +23,7 @@ public class Main {
             System.out.println("Turn " + turn + ":");
             answer = scanner.nextLong();
             turn++;
-        } while (checkAnswerForLong(generatedSecretNumber, answer));
+        } while (checkAnswerForLong(generatedSecretNumber, answer, count));
     }
 
     public static long generateSecretNumber(int count){
@@ -30,7 +31,8 @@ public class Main {
         StringBuilder secretNumber = new StringBuilder();
         long number;
         while (secretNumber.length() < count) {
-            StringBuilder randomGenerated = new StringBuilder(String.valueOf(System.nanoTime()));
+            Random random = new Random();
+            StringBuilder randomGenerated = new StringBuilder(String.valueOf(random.nextLong()));
             randomGenerated.reverse();
             for (int i = 0; i < randomGenerated.length(); i++) {
                 if (secretNumber.length() == 0) {
@@ -59,10 +61,17 @@ public class Main {
         return number;
     }
 
-    public static boolean checkAnswerForLong(long secretNumber, long answer) {
+    public static boolean checkAnswerForLong(long secretNumber, long answer, int count) {
         String a = Long.toString(secretNumber);
         char[] checkSecretNumber = a.toCharArray();
         String b = Long.toString(answer);
+        if (b.length() < count) {
+            StringBuilder temp = new StringBuilder();
+            for (int i = 0; i < count; i++) {
+                temp.append(0);
+            }
+            b = temp.toString();
+        }
         char[] checkAnswerNumber = b.toCharArray();
         int bull = 0;
         int cow = 0;
@@ -80,7 +89,7 @@ public class Main {
                     }
                 }
             }
-            if (bull == 0 && cow ==0){
+            if (bull == 0 && cow == 0){
                 System.out.println("Grade: None.");
             } else {
                 System.out.println("Grade: " + bull + " bull(s) and " + cow + " cow(s).");
