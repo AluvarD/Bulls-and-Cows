@@ -1,5 +1,5 @@
 package bullscows;
-import java.util.Arrays;
+import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -7,19 +7,41 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String answer;
-        int count;
+        int count = 1;
         System.out.println("Please, enter the secret code's length:");
         int lengt;
-        while (true) {
-            count = scanner.nextInt();
-            if (count > 36) {
-                System.out.println("Error: can't generate a secret number with a length of 36 because there aren't enough unique digits.");
+        String input;
+        try {
+            input = scanner.nextLine();
+            if (!input.matches("\\d+")){
+                throw new InputMismatchException("Error: " + input + " isn't a valid number.");
+            } else if(Integer.parseInt(input) == 0) {
+                throw new InputMismatchException("Error! bound must be positive");
+            } else if (Integer.parseInt(input) > 36) {
+                throw new InputMismatchException("Error: maximum number of possible symbols in the code is 36 (0-9, a-z).");
             } else {
-                break;
+                count = Integer.parseInt(input);
             }
+        } catch (InputMismatchException e) {
+            System.out.println(e.getMessage());
+            return;
         }
         System.out.println("Input the number of possible symbols in the code:");
-        lengt = scanner.nextInt();
+        try {
+            input = scanner.nextLine();
+            if (!input.matches("\\d+")) {
+                throw new InputMismatchException("Error: " + input + " isn't a valid number.");
+            } else if (Integer.parseInt(input) < count) {
+                throw new InputMismatchException("Error: it's not possible to generate a code with a length of " + input + " with " + count + " unique symbols.");
+            } else if (Integer.parseInt(input) > 36) {
+                throw new InputMismatchException("Error: maximum number of possible symbols in the code is 36 (0-9, a-z).");
+            } else {
+                lengt = Integer.parseInt(input);
+            }
+        } catch (InputMismatchException e) {
+            System.out.println(e.getMessage());
+            return;
+        }
         String generatedSecretNumber = generateSecretNumber(count, lengt);
 
         System.out.print("The secret is prepared: ");
